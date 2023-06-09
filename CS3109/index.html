@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Organization Event Page</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="script.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#schedule">Schedule</a></li>
+        <li><a href="#speakers">Speakers</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home">
+      <h1>Welcome to our Organization Event</h1>
+      <p>Join us for an exciting event filled with knowledge, networking, and fun!</p>
+    </section>
+
+    <section id="about">
+      <h2>About the Event</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu augue ut mi iaculis aliquam vel vel ipsum. Integer non aliquet libero. Nam id hendrerit ligula.</p>
+    </section>
+
+    <section id="schedule">
+      <h2>Event Schedule</h2>
+      <ul id="schedule-list">
+        <!-- Schedule data will be dynamically loaded here -->
+      </ul>
+    </section>
+
+    <section id="speakers">
+      <h2>Featured Speakers</h2>
+      <div id="speakers-list">
+        <!-- Speakers data will be dynamically loaded here -->
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <div ng-controller="ContactController">
+        <form ng-submit="submitForm()">
+          <input type="text" placeholder="Name" ng-model="name">
+          <input type="email" placeholder="Email" ng-model="email">
+          <textarea placeholder="Message" ng-model="message"></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Institute Event. All rights reserved.</p>
+  </footer>
+</body>
+</html>
